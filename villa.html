@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <style>
+        @font-face {
+            font-family: 'The Seasons';
+            src: url('theSeasonsFont.otf') format('opentype');
+            /* Add additional formats if available */
+        }
+
+        body {
+            margin: 0;
+            font-family: 'The Seasons', Arial, sans-serif; /* Use The Seasons font */
+            background-image: url('landingPage.png');
+            background-size: 70%; /* Reduce image size by 30% */
+            background-repeat: no-repeat;
+            background-position: center 40px; /* Adjust vertical position */
+ 
+        }
+      header {
+    position: relative; /* Set header to relative positioning */
+    background-color: #ede5d9; /* Set header background color */
+    color: #6f131e; /* Set header font color */
+    padding: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'The Seasons', Arial, sans-serif; /* Use The Seasons font */
+}
+
+header img {
+    position: absolute; /* Set image to absolute positioning */
+    top: 50%; /* Position image vertically at the middle of the header */
+    transform: translateY(-50%); /* Center image vertically */
+    height: 130px;
+    width: auto;
+}
+
+        nav a {
+            color: #6f131e; /* Set nav link font color */
+            text-decoration: none;
+            margin-left: 40px; /* Adjust margin-left */
+            font-family: 'The Seasons', Arial, sans-serif; /* Use The Seasons font */
+            cursor: pointer; /* Add cursor pointer */
+        }
+        footer {
+            background-color: #ede5d9; /* Set footer background color */
+            color: #6f131e; /* Set footer font color */
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-family: 'The Seasons', Arial, sans-serif; /* Use The Seasons font */
+        }
+        footer a {
+            color: #6f131e; /* Set footer link font color */
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <div>
+        <img src="logo.png" alt="Logo">
+    </div>
+    <nav>
+        <a href="villa.html">Home</a>
+        <a href="gallery.html">Gallery</a> <!-- Link to the gallery.html page -->
+        <a href="schedule.html">Schedule</a>
+        <a href="contribution.html">Contribution</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+
+    <footer>
+        <a href="#">Terms and Policies</a>
+    </footer>
+
+    <script>
+        function reloadPage() {
+            location.reload(); // Reload the page
+        }
+    </script>
+</body>
+</html>

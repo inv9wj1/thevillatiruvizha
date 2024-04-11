@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Avoa</title>
+    <style>
+        /* Your existing CSS styles for galleryAvoa.html */
+        @font-face {
+            font-family: 'The Seasons';
+            src: url('theSeasonsFont.otf') format('opentype');
+            /* Add additional formats if available */
+        }
+  table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        thead th {
+            background-color: #ede5d9; /* Change background color of index column */
+            color: #6f131e; /* Change color of index column text */
+        }
+
+        body {
+            margin: 0;
+            font-family: 'The Seasons', Arial, sans-serif; /* Use The Seasons font */
+            text-align: center; /* Center the content */
+        }
+          header {
+    position: relative; /* Set header to relative positioning */
+    background-color: #ede5d9; /* Set header background color */
+    color: #6f131e; /* Set header font color */
+    padding: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'The Seasons', Arial, sans-serif; /* Use The Seasons font */
+}
+
+header img {
+    position: absolute; /* Set image to absolute positioning */
+    top: 50%; /* Position image vertically at the middle of the header */
+    transform: translateY(-50%); /* Center image vertically */
+    height: 130px;
+    width: auto;
+}
+        nav a {
+            color: #6f131e; /* Set nav link font color */
+            text-decoration: none;
+            margin-left: 40px; /* Adjust margin-left */
+            font-family: 'The Seasons', Arial, sans-serif; /* Use The Seasons font */
+            cursor: pointer; /* Add cursor pointer */
+        }
+        nav a.highlight {
+            color: #eda812; /* Highlighted color for Gallery option */
+        }
+        footer {
+            background-color: #ede5d9; /* Set footer background color */
+            color: #6f131e; /* Set footer font color */
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-family: 'The Seasons', Arial, sans-serif; /* Use The Seasons font */
+        }
+        footer a {
+            color: #6f131e; /* Set footer link font color */
+            text-decoration: none;
+        }
+        .gallery-images {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping to create multiple rows */
+            justify-content: center;
+            margin-top: 20px;
+        }
+       .gallery-images img {
+    width: 180px; /* Increase the width to 140px */
+    height: auto;
+    margin: 10px;
+    cursor: pointer; /* Add cursor pointer */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+        .first-row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .first-row img {
+            margin: 10px;
+            width: 30%; /* Increase the width to 30% */
+            height: auto;
+        }
+        
+        /* Apply hover effect to images in the second row */
+        .second-row img:hover {
+            transform: scale(2.5); /* Enlarge by 150% */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="logo.png" alt="Logo">
+        </div>
+        <nav>
+        <a href="villa.html">Home</a>
+       <a href="gallery.html">Gallery</a> <!-- Highlighted Gallery option -->
+        <a href="schedule.html" class="highlight">Schedule</a>
+        <a href="contribution.html">Contribution</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    </header>
+
+   <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Event Name</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Team Name / Logo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Football Match</td>
+                <td>April15</td>
+                <td>18:00</td>
+                <td>Team A vs Team B</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Basketball Tournament</td>
+                <td>April16</td>
+                <td>14:30</td>
+                <td>Team C vs Team D</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Cricket Match</td>
+                <td>April18</td>
+                <td>10:00</td>
+                <td>Team E vs Team F</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Tennis Championship</td>
+                <td>April20</td>
+                <td>16:45</td>
+                <td>Player X vs Player Y</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <footer>
+        <a href="#">Terms and Policies</a>
+    </footer>
+</body>
+</html>
+
+
