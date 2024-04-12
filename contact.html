@@ -123,7 +123,7 @@
             display: flex;
             justify-content: center;
             width: 50%;
-	    margin-left: 350px;
+	    margin-left: 15px;
         }
 
         /* Style for the image to resize without stretching or shrinking */
@@ -139,6 +139,31 @@
             .second-row img {
                 width: 80%; /* Adjust image width for smaller screens */
             }
+        }
+/* Style for the divs containing the contact information */
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        /* Style for each individual contact information div */
+        .contact-info div {
+            margin: 10px;
+        }
+.container {
+            width: 100%;
+            overflow: hidden; /* Clears the float */
+	    margin-left: 320px;
+        }
+        .contact-info, .image-container {
+            display: block;
+            width: 50%; /* Adjust width as needed */
+            float: left; /* Float the divs to the left to make them appear side by side */
+            box-sizing: border-box; /* Include padding and border in the width */
+            padding: 10px; /* Adjust padding as needed */
         }
     </style>
 </head>
@@ -158,15 +183,20 @@
     <br>
     <br>
 
-    
-    <div><h2>Aurum Villas Owner's association</h2></div>
-    <div><h3>Villa 325, Pacifica Aurum Villas,</h3></div>
-    <div><h3>OMR, Padur - 603103</h3></div>
-    <div><h3>Chennai, TamilNadu.</h3></div>
-    <div><h3>Ph: +91 805 628 6665</h3></div>
-    <div class="image-container">
-        <img src="avoa.png" alt="Logo">
+      <div class="container">
+        <div class="contact-info">
+            <div><h2>Aurum Villas Owner's association</h2></div>
+            <div><h3>Villa 325, Pacifica Aurum Villas,</h3></div>
+            <div><h3>OMR, Padur - 603103,</h3></div>
+            <div><h3>Chennai, TamilNadu.</h3></div>
+            <div><h3>Ph: +91 805 628 6665</h3></div>
+        </div>
+
+        <div class="image-container">
+            <img src="avoa.png" alt="Logo">
+        </div>
     </div>
+    
     <footer>
         <a href="#">Terms and Policies</a>
     </footer>
