@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery Avoa</title>
+    <title>GalleryVillaRhythms</title>
     <style>
         /* Your existing CSS styles for galleryAvoa.html */
         @font-face {
@@ -17,34 +17,44 @@
             font-family: 'The Seasons', Arial, sans-serif; /* Use The Seasons font */
             text-align: center; /* Center the content */
         }
-             header {
-    position: relative; /* Set header to relative positioning */
-    background-color: #ede5d9; /* Set header background color */
-    color: #6f131e; /* Set header font color */
-    padding: 35px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'The Seasons', Arial, sans-serif; /* Use The Seasons font */
-}
 
-header img {
-    position: absolute; /* Set image to absolute positioning */
-    top: 50%; /* Position image vertically at the middle of the header */
-    transform: translateY(-50%); /* Center image vertically */
-    height: 130px;
-    width: auto;
-}
+        header {
+            position: relative; /* Set header to relative positioning */
+            background-color: #ede5d9; /* Set header background color */
+            color: #6f131e; /* Set header font color */
+            padding: 35px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'The Seasons', Arial, sans-serif; /* Use The Seasons font */
+        }
+
+        header img {
+            position: absolute; /* Set image to absolute positioning */
+            top: 50%; /* Position image vertically at the middle of the header */
+            transform: translateY(-50%); /* Center image vertically */
+            height: 130px;
+            width: auto;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap; /* Allow navigation links to wrap */
+            justify-content: center; /* Center align navigation links */
+        }
+
         nav a {
             color: #6f131e; /* Set nav link font color */
             text-decoration: none;
-            margin-left: 40px; /* Adjust margin-left */
+            margin: 10px; /* Adjust margin for navigation links */
             font-family: 'The Seasons', Arial, sans-serif; /* Use The Seasons font */
             cursor: pointer; /* Add cursor pointer */
         }
+
         nav a.highlight {
             color: #eda812; /* Highlighted color for Gallery option */
         }
+
         footer {
             background-color: #ede5d9; /* Set footer background color */
             color: #6f131e; /* Set footer font color */
@@ -55,38 +65,50 @@ header img {
             width: 100%;
             font-family: 'The Seasons', Arial, sans-serif; /* Use The Seasons font */
         }
+
         footer a {
             color: #6f131e; /* Set footer link font color */
             text-decoration: none;
         }
+
         .gallery-images {
             display: flex;
             flex-wrap: wrap; /* Allow wrapping to create multiple rows */
             justify-content: center;
             margin-top: 20px;
         }
-       .gallery-images img {
-    width: 180px; /* Increase the width to 140px */
-    height: auto;
-    margin: 10px;
-    cursor: pointer; /* Add cursor pointer */
-    transition: transform 0.3s ease; /* Smooth transition */
-}
+
+        .gallery-images img {
+            width: 180px; /* Increase the width to 140px */
+            height: auto;
+            margin: 10px;
+            cursor: pointer; /* Add cursor pointer */
+            transition: transform 0.3s ease; /* Smooth transition */
+        }
 
         .first-row {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
         }
+
         .first-row img {
             margin: 10px;
             width: 30%; /* Increase the width to 30% */
             height: auto;
         }
-        
+
         /* Apply hover effect to images in the second row */
         .second-row img:hover {
             transform: scale(2.5); /* Enlarge by 150% */
+        }
+
+        /* Media query for smaller screens */
+        @media screen and (max-width: 768px) {
+            .first-row img,
+            .second-row img {
+                width: 80%; /* Adjust image width for smaller screens */
+            }
         }
     </style>
 </head>
@@ -95,13 +117,13 @@ header img {
         <div>
             <img src="logo.png" alt="Logo">
         </div>
-      <nav>
-        <a href="villa.html">Home</a>
-       <a href="gallery.html" class="highlight">Gallery</a> <!-- Highlighted Gallery option -->
-        <a href="schedule.html">Schedule</a>
-        <a href="contribution.html">Contribution</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+        <nav>
+            <a href="villa.html">Home</a>
+            <a href="gallery.html" class="highlight">Gallery</a> <!-- Highlighted Gallery option -->
+            <a href="schedule.html">Schedule</a>
+            <a href="contribution.html">Contribution</a>
+            <a href="contact.html">Contact</a>
+        </nav>
     </header>
 
     <div class="gallery-images">

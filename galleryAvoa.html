@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery Avoa</title>
+    <title>GalleryAvoa</title>
     <style>
-        /* Your existing CSS styles for galleryAvoa.html */
         @font-face {
             font-family: 'The Seasons';
             src: url('theSeasonsFont.otf') format('opentype');
@@ -17,34 +16,44 @@
             font-family: 'The Seasons', Arial, sans-serif; /* Use The Seasons font */
             text-align: center; /* Center the content */
         }
-            header {
-    position: relative; /* Set header to relative positioning */
-    background-color: #ede5d9; /* Set header background color */
-    color: #6f131e; /* Set header font color */
-    padding: 35px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'The Seasons', Arial, sans-serif; /* Use The Seasons font */
-}
 
-header img {
-    position: absolute; /* Set image to absolute positioning */
-    top: 50%; /* Position image vertically at the middle of the header */
-    transform: translateY(-50%); /* Center image vertically */
-    height: 130px;
-    width: auto;
-}
+        header {
+            position: relative; /* Set header to relative positioning */
+            background-color: #ede5d9; /* Set header background color */
+            color: #6f131e; /* Set header font color */
+            padding: 35px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'The Seasons', Arial, sans-serif; /* Use The Seasons font */
+        }
+
+        header img {
+            position: absolute; /* Set image to absolute positioning */
+            top: 50%; /* Position image vertically at the middle of the header */
+            transform: translateY(-50%); /* Center image vertically */
+            height: 130px;
+            width: auto;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap; /* Allow navigation links to wrap */
+            justify-content: center; /* Center align navigation links */
+        }
+
         nav a {
             color: #6f131e; /* Set nav link font color */
             text-decoration: none;
-            margin-left: 40px; /* Adjust margin-left */
+            margin: 10px; /* Adjust margin for navigation links */
             font-family: 'The Seasons', Arial, sans-serif; /* Use The Seasons font */
             cursor: pointer; /* Add cursor pointer */
         }
+
         nav a.highlight {
             color: #eda812; /* Highlighted color for Gallery option */
         }
+
         footer {
             background-color: #ede5d9; /* Set footer background color */
             color: #6f131e; /* Set footer font color */
@@ -55,38 +64,34 @@ header img {
             width: 100%;
             font-family: 'The Seasons', Arial, sans-serif; /* Use The Seasons font */
         }
+
         footer a {
             color: #6f131e; /* Set footer link font color */
             text-decoration: none;
         }
-        .gallery-images {
-            display: flex;
-            flex-wrap: wrap; /* Allow wrapping to create multiple rows */
-            justify-content: center;
-            margin-top: 20px;
-        }
-       .gallery-images img {
-    width: 180px; /* Increase the width to 140px */
-    height: auto;
-    margin: 10px;
-    cursor: pointer; /* Add cursor pointer */
-    transition: transform 0.3s ease; /* Smooth transition */
-}
 
-        .first-row {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .first-row img {
-            margin: 10px;
-            width: 30%; /* Increase the width to 30% */
-            height: auto;
-        }
-        
-        /* Apply hover effect to images in the second row */
-        .second-row img:hover {
-            transform: scale(2.5); /* Enlarge by 150% */
+        /* Media query for smaller screens */
+        @media screen and (max-width: 768px) {
+            header {
+                flex-direction: column; /* Stack header items vertically */
+                padding: 20px;
+            }
+
+            header img {
+                position: static; /* Reset image positioning */
+                margin-bottom: 20px; /* Add spacing below logo */
+            }
+
+            nav {
+                flex-direction: column; /* Stack navigation links vertically */
+                align-items: center; /* Center align navigation links */
+            }
+
+            .first-row img {
+                margin: 15px; /* Increase margin to bring down the image slightly */
+                width: 80%; /* Adjust the width */
+                height: auto;
+            }
         }
     </style>
 </head>
@@ -95,29 +100,27 @@ header img {
         <div>
             <img src="logo.png" alt="Logo">
         </div>
-      <nav>
-        <a href="villa.html">Home</a>
-       <a href="gallery.html" class="highlight">Gallery</a> <!-- Highlighted Gallery option -->
-        <a href="schedule.html">Schedule</a>
-        <a href="contribution.html">Contribution</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+        <nav>
+            <a href="villa.html">Home</a>
+            <a href="gallery.html" class="highlight">Gallery</a> <!-- Highlighted Gallery option -->
+            <a href="schedule.html">Schedule</a>
+            <a href="contribution.html">Contribution</a>
+            <a href="contact.html">Contact</a>
+        </nav>
     </header>
 
-    <div class="gallery-images">
+    <div>
+        <div><h1>Select the gallery</h1></div>
         <!-- First Row -->
         <div class="first-row">
-            <a href="#"><img src="avoa.png" alt="Avoa"></a>
+            <a href="galleryAvoa.html"><img src="avoa.png" alt="Avoa"></a>
         </div>
         <!-- Second Row -->
-        <div class="gallery-images second-row">
-            <a href="#"><img src="landingPage.png" alt="Golden Club1"></a>
-            <a href="#"><img src="landingPage.png" alt="Golden Club2"></a>
-            <a href="#"><img src="landingPage.png" alt="Golden Club3"></a>
-            <a href="#"><img src="landingPage.png" alt="Golden Club4"></a>
-            <a href="#"><img src="landingPage.png" alt="Golden Club5"></a>
-            <a href="#"><img src="landingPage.png" alt="Golden Club6"></a>
-            <a href="#"><img src="landingPage.png" alt="Golden Club7"></a>
+        <div class="gallery-images">
+            <a href="galleryGoldenClub.html"><img src="goldenClub.png" alt="Golden Club"></a>
+            <a href="galleryKyc.html"><img src="kyc.png" alt="KYC"></a>
+            <a href="gallerySports.html"><img src="sports.png" alt="Sports"></a>
+            <a href="galleryVillaRhythms.html"><img src="VillaRhythms.jpg" alt="Villa Rhythms"></a>
         </div>
     </div>
 
