@@ -35,6 +35,7 @@
             text-align: center; /* Center the content */
         }
 
+       
         header {
             position: relative; /* Set header to relative positioning */
             background-color: #ede5d9; /* Set header background color */
@@ -66,9 +67,7 @@
             margin: 10px; /* Adjust margin for navigation links */
             font-family: 'The Seasons', Arial, sans-serif; /* Use The Seasons font */
             cursor: pointer; /* Add cursor pointer */
-        }
-
-        nav a.highlight {
+        }        nav a.highlight {
             color: #eda812; /* Highlighted color for Gallery option */
         }
 
@@ -96,8 +95,8 @@
         }
 
         .gallery-images img {
-            width: 180px; /* Increase the width to 140px */
-            height: auto;
+            width: 130px; /* Reduce the width of the image */
+            max-height: 150px; /* Set maximum height */
             margin: 10px;
             cursor: pointer; /* Add cursor pointer */
             transition: transform 0.3s ease; /* Smooth transition */
@@ -111,13 +110,27 @@
 
         .first-row img {
             margin: 10px;
-            width: 30%; /* Increase the width to 30% */
+            width: 20%; /* Increase the width to 30% */
             height: auto;
         }
 
         /* Apply hover effect to images in the second row */
         .second-row img:hover {
             transform: scale(2.5); /* Enlarge by 150% */
+        }
+/* Style for the image container div */
+        .image-container {
+            display: flex;
+            
+            width: 50%;
+	    margin-left: 520px;
+        }
+
+        /* Style for the image to resize without stretching or shrinking */
+        .image-container img {
+            max-width: 50%;
+            max-height: 50%;
+            object-fit: contain; /* Resize the image to fit within the container without stretching or shrinking */
         }
 
         /* Media query for smaller screens */
@@ -144,16 +157,14 @@
     </header>
     <br>
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
+
+    
     <div><h2>Aurum Villas Owner's association</h2></div>
     <div><h3>Villa 325, Pacifica Aurum Villas,</h3></div>
     <div><h3>OMR, Padur - 603103</h3></div>
     <div><h3>Chennai, TamilNadu.</h3></div>
     <div><h3>Ph: +91 805 628 6665</h3></div>
-    <div>
+    <div class="image-container">
         <img src="avoa.png" alt="Logo">
     </div>
     <footer>
