@@ -84,10 +84,7 @@ header img {
             height: auto;
         }
         
-        /* Apply hover effect to images in the second row */
-        .second-row img:hover {
-            transform: scale(2.5); /* Enlarge by 150% */
-        }
+     
 
 	.modal {
     display: none; /* Hide the modal by default */
@@ -123,6 +120,12 @@ header img {
 /* Change close button color on hover */
 .close:hover {
     color: #ccc;
+}
+@media screen and (min-width: 769px) {
+    /* Styles for larger screens */
+  .second-row img {
+        cursor: pointer; /* Change cursor to indicate clickable element */
+    }
 }
 /* Media query for smaller screens */
         @media screen and (max-width: 768px) {
