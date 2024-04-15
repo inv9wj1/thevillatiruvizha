@@ -165,6 +165,27 @@
             box-sizing: border-box; /* Include padding and border in the width */
             padding: 10px; /* Adjust padding as needed */
         }
+ /* Media query for smaller screens */
+        @media screen and (max-width: 768px) {
+            body {
+                background-size: 100%; /* Adjust background image size */
+            }
+            
+            header {
+                flex-direction: column; /* Stack header items vertically */
+                padding: 20px;
+            }
+
+            header img {
+                position: static; /* Reset image positioning */
+                margin-bottom: 20px; /* Add spacing below logo */
+            }
+
+            nav {
+                flex-direction: column; /* Stack navigation links vertically */
+                align-items: center; /* Center align navigation links */
+            }
+        }
     </style>
 </head>
 <body>

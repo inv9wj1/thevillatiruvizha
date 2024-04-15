@@ -113,11 +113,25 @@
             transform: scale(2.5); /* Enlarge by 150% */
         }
 
-        /* Media query for smaller screens */
+         /* Media query for smaller screens */
         @media screen and (max-width: 768px) {
-            .first-row img,
-            .second-row img {
-                width: 80%; /* Adjust image width for smaller screens */
+            body {
+                background-size: 100%; /* Adjust background image size */
+            }
+            
+            header {
+                flex-direction: column; /* Stack header items vertically */
+                padding: 20px;
+            }
+
+            header img {
+                position: static; /* Reset image positioning */
+                margin-bottom: 20px; /* Add spacing below logo */
+            }
+
+            nav {
+                flex-direction: column; /* Stack navigation links vertically */
+                align-items: center; /* Center align navigation links */
             }
         }
     </style>
