@@ -108,6 +108,9 @@ header img {
                 flex-direction: column; /* Stack navigation links vertically */
                 align-items: center; /* Center align navigation links */
             }
+	   .second-row img {
+        cursor: pointer; /* Change cursor to indicate clickable element */
+    }
         }
     </style>
 </head>
@@ -145,5 +148,25 @@ header img {
     <footer>
         <a href="#">Terms and Policies</a>
     </footer>
+<!-- Add the script tag here -->
+    <script>
+        function toggleTransform() {
+            const images = document.querySelectorAll('.second-row img');
+            images.forEach(img => {
+                img.addEventListener('click', () => {
+                    if (img.classList.contains('scaled')) {
+                        img.style.transform = 'none'; // Reset transform
+                        img.classList.remove('scaled');
+                    } else {
+                        img.style.transform = 'scale(2.5)'; // Enlarge by 150%
+                        img.classList.add('scaled');
+                    }
+                });
+            });
+        }
+
+        // Call the function on page load
+        window.addEventListener('load', toggleTransform);
+    </script>
 </body>
 </html>
