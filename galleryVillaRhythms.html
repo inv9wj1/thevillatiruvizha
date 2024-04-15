@@ -84,12 +84,48 @@ header img {
             height: auto;
         }
         
-        /* Apply hover effect to images in the second row */
-        .second-row img:hover {
-            transform: scale(2.5); /* Enlarge by 150% */
-        }
+        .modal {
+    display: none; /* Hide the modal by default */
+    position: fixed; /* Position the modal */
+    z-index: 9999; /* Set a high z-index to ensure it appears on top of other elements */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    overflow: auto; /* Enable scrolling if needed */
+}
 
-         /* Media query for smaller screens */
+/* Modal content */
+.modal-content {
+    margin: auto; /* Center the modal content */
+    display: block;
+    max-width: 90%; /* Adjust maximum width */
+    max-height: 90%; /* Adjust maximum height */
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #fff; /* Adjust close button color */
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Change close button color on hover */
+.close:hover {
+    color: #ccc;
+}
+@media screen and (min-width: 769px) {
+    /* Styles for larger screens */
+  .second-row img {
+        cursor: pointer; /* Change cursor to indicate clickable element */
+    }
+}
+/* Media query for smaller screens */
         @media screen and (max-width: 768px) {
             body {
                 background-size: 100%; /* Adjust background image size */
@@ -109,6 +145,20 @@ header img {
                 flex-direction: column; /* Stack navigation links vertically */
                 align-items: center; /* Center align navigation links */
             }
+	   .second-row img {
+        cursor: pointer; /* Change cursor to indicate clickable element */
+    }
+/* Adjust styles for modal */
+    .modal-content {
+        max-width: 95%; /* Adjust maximum width */
+        max-height: 95%; /* Adjust maximum height */
+    }
+
+    .close {
+        font-size: 20px; /* Adjust close button font size */
+        top: 10px;
+        right: 10px;
+    }
         }
     </style>
 </head>
@@ -146,5 +196,40 @@ header img {
     <footer>
         <a href="#">Terms and Policies</a>
     </footer>
+<!-- Modal -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <!-- Add the script tag here -->
+    <script>
+        function toggleTransform() {
+            const images = document.querySelectorAll('.second-row img');
+            images.forEach(img => {
+                img.addEventListener('click', () => {
+                    modal.style.display = "block";
+                    modalImg.src = img.src;
+                });
+            });
+        }
+
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal
+        var modalImg = document.getElementById("modalImg");
+
+        // Get the close button
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        };
+
+        // Call the toggleTransform function on page load
+        window.addEventListener('load', toggleTransform);
+    </script>
 </body>
 </html>
