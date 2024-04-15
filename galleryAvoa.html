@@ -90,6 +90,10 @@ header img {
         }
 /* Media query for smaller screens */
         @media screen and (max-width: 768px) {
+            body {
+                background-size: 100%; /* Adjust background image size */
+            }
+            
             header {
                 flex-direction: column; /* Stack header items vertically */
                 padding: 20px;
@@ -103,12 +107,6 @@ header img {
             nav {
                 flex-direction: column; /* Stack navigation links vertically */
                 align-items: center; /* Center align navigation links */
-            }
-
-            .first-row img {
-                margin: 15px; /* Increase margin to bring down the image slightly */
-                width: 80%; /* Adjust the width */
-                height: auto;
             }
         }
     </style>
