@@ -5,31 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contribution</title>
     <style>
-        /* Your existing CSS styles for galleryAvoa.html */
         @font-face {
             font-family: 'The Seasons';
             src: url('theSeasonsFont.otf') format('opentype');
             /* Add additional formats if available */
         }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
 
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-
-        thead th {
-            background-color: #ede5d9; /* Change background color of index column */
-            color: #6f131e; /* Change color of index column text */
-        }
-
-         body {
+        body {
             margin: 0;
             font-family: 'The Seasons', Arial, sans-serif; /* Use The Seasons font */
             background-size: 70%; /* Reduce image size by 70% */
@@ -70,18 +52,11 @@
             cursor: pointer; /* Add cursor pointer */
         }
 
-        nav a.highlight {
-            color: #eda812; /* Highlighted color for Gallery option */
-        }
-
         footer {
             background-color: #ede5d9; /* Set footer background color */
             color: #6f131e; /* Set footer font color */
             text-align: center;
             padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
             font-family: 'The Seasons', Arial, sans-serif; /* Use The Seasons font */
         }
 
@@ -90,44 +65,11 @@
             text-decoration: none;
         }
 
-        .gallery-images {
-            display: flex;
-            flex-wrap: wrap; /* Allow wrapping to create multiple rows */
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .gallery-images img {
-            width: 180px; /* Increase the width to 140px */
-            height: auto;
-            margin: 10px;
-            cursor: pointer; /* Add cursor pointer */
-            transition: transform 0.3s ease; /* Smooth transition */
-        }
-
-        .first-row {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .first-row img {
-            margin: 10px;
-            width: 30%; /* Increase the width to 30% */
-            height: auto;
-        }
-
-        /* Apply hover effect to images in the second row */
-        .second-row img:hover {
-            transform: scale(2.5); /* Enlarge by 150% */
-        }
-
-         /* Media query for smaller screens */
+        /* Media query for smaller screens */
         @media screen and (max-width: 768px) {
-                body {
+            body {
                 background-size: 100%; /* Adjust background image size */
             }
-
             
             header {
                 flex-direction: column; /* Stack header items vertically */
