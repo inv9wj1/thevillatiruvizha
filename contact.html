@@ -5,37 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <style>
-        /* Your existing CSS styles for galleryAvoa.html */
-        @font-face {
+               @font-face {
             font-family: 'The Seasons';
             src: url('theSeasonsFont.otf') format('opentype');
             /* Add additional formats if available */
         }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-
-        thead th {
-            background-color: #ede5d9; /* Change background color of index column */
-            color: #6f131e; /* Change color of index column text */
-        }
-
         body {
             margin: 0;
             font-family: 'The Seasons', Arial, sans-serif; /* Use The Seasons font */
-            text-align: center; /* Center the content */
+            background-size: 70%; /* Reduce image size by 70% */
+            background-repeat: no-repeat;
+            background-position: center 40px; /* Adjust vertical position */
         }
 
-       
         header {
             position: relative; /* Set header to relative positioning */
             background-color: #ede5d9; /* Set header background color */
@@ -67,8 +50,6 @@
             margin: 10px; /* Adjust margin for navigation links */
             font-family: 'The Seasons', Arial, sans-serif; /* Use The Seasons font */
             cursor: pointer; /* Add cursor pointer */
-        }        nav a.highlight {
-            color: #eda812; /* Highlighted color for Gallery option */
         }
 
         footer {
@@ -76,9 +57,6 @@
             color: #6f131e; /* Set footer font color */
             text-align: center;
             padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
             font-family: 'The Seasons', Arial, sans-serif; /* Use The Seasons font */
         }
 
@@ -87,85 +65,7 @@
             text-decoration: none;
         }
 
-        .gallery-images {
-            display: flex;
-            flex-wrap: wrap; /* Allow wrapping to create multiple rows */
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .gallery-images img {
-            width: 130px; /* Reduce the width of the image */
-            max-height: 150px; /* Set maximum height */
-            margin: 10px;
-            cursor: pointer; /* Add cursor pointer */
-            transition: transform 0.3s ease; /* Smooth transition */
-        }
-
-        .first-row {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .first-row img {
-            margin: 10px;
-            width: 20%; /* Increase the width to 30% */
-            height: auto;
-        }
-
-        /* Apply hover effect to images in the second row */
-        .second-row img:hover {
-            transform: scale(2.5); /* Enlarge by 150% */
-        }
-/* Style for the image container div */
-        .image-container {
-            display: flex;
-            justify-content: center;
-            width: 50%;
-	    margin-left: 15px;
-        }
-
-        /* Style for the image to resize without stretching or shrinking */
-        .image-container img {
-            max-width: 50%;
-            max-height: 50%;
-            object-fit: contain; /* Resize the image to fit within the container without stretching or shrinking */
-        }
-
         /* Media query for smaller screens */
-        @media screen and (max-width: 768px) {
-            .first-row img,
-            .second-row img {
-                width: 80%; /* Adjust image width for smaller screens */
-            }
-        }
-/* Style for the divs containing the contact information */
-        .contact-info {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-            align-items: center;
-            margin-top: 20px;
-        }
-
-        /* Style for each individual contact information div */
-        .contact-info div {
-            margin: 10px;
-        }
-.container {
-            width: 100%;
-            overflow: hidden; /* Clears the float */
-	    margin-left: 320px;
-        }
-        .contact-info, .image-container {
-            display: block;
-            width: 50%; /* Adjust width as needed */
-            float: left; /* Float the divs to the left to make them appear side by side */
-            box-sizing: border-box; /* Include padding and border in the width */
-            padding: 10px; /* Adjust padding as needed */
-        }
- /* Media query for smaller screens */
         @media screen and (max-width: 768px) {
             body {
                 background-size: 100%; /* Adjust background image size */
@@ -214,7 +114,7 @@
         </div>
 
         <div class="image-container">
-            <img src="avoa.png" alt="Logo">
+            <img src="avoa.png" alt="Logo" style="max-width: 60%; max-height: 60%;">
         </div>
     </div>
     
