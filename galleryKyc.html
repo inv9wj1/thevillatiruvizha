@@ -141,18 +141,12 @@
 }
 /* Media query for smaller screens */
         @media screen and (max-width: 768px) {
-		 .second-row iframe {
+		   .second-row iframe {
         width: 100%; /* Set the width to 100% for smaller screens */
-        
+        aspect-ratio: 16 / 9; /* Set the aspect ratio of the iframes */
         margin: 10px 0; /* Add some vertical margin between iframes */
     }
- /* Adjust the height of the iframe container */
-    .gallery-images .second-row {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: flex-start; /* Align items to the top */
-    }
+  
             body {
                 background-size: 100%; /* Adjust background image size */
             }
