@@ -20,6 +20,25 @@
 
 
     <style>
+.rolling-text-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.rolling-text {
+    white-space: nowrap;
+    animation: roll 30s linear infinite;
+}
+
+@keyframes roll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
         @font-face {
             font-family: 'The Seasons';
             src: url('theSeasonsFont.otf') format('opentype');
@@ -105,9 +124,10 @@
 </head>
 <body>
     <header>
-        <div>
-            <img src="logo.png" alt="Logo">
-        </div>
+       <div>
+    <img src="logo.png" alt="Logo">
+</div>
+
         <nav>
             <a href="villa.html">Home</a>
             <a href="gallery.html">Gallery</a> <!-- Link to the gallery.html page -->
@@ -116,8 +136,12 @@
             <a href="contact.html">Contact</a>
         </nav>
     </header>
+	<div class="rolling-text-container">
+        <div class="rolling-text"><h2> Saturday, April 27th , Canal Lawn Area, Pls register as early as possible</h2>
+		</div>
+    	</div>
 	<div style="display: flex; justify-content: center; align-items: center;">
-    <img src="landingPage.png" alt="Logo" style="max-width: 60%; max-height: 60%;">
+    <img src="landingPage.png" alt="Logo" style="max-width: 45%; max-height: 45%;">
 </div>
 
 
