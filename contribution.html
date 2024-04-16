@@ -29,10 +29,12 @@
             color: #6f131e; /* Change color of index column text */
         }
 
-        body {
+         body {
             margin: 0;
             font-family: 'The Seasons', Arial, sans-serif; /* Use The Seasons font */
-            text-align: center; /* Center the content */
+            background-size: 70%; /* Reduce image size by 70% */
+            background-repeat: no-repeat;
+            background-position: center 40px; /* Adjust vertical position */
         }
 
         header {
@@ -122,11 +124,9 @@
 
          /* Media query for smaller screens */
         @media screen and (max-width: 768px) {
-               body {
-        background-size: cover; /* Ensure background image covers the entire element */
-        margin: 0 auto; /* Center the body horizontally */
-        font-size: 14px; /* Reduce the font size */
-    }
+                body {
+                background-size: 100%; /* Adjust background image size */
+            }
 
             
             header {
