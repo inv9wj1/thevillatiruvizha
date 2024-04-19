@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrations</title>
+    <style>
+        @font-face {
+            font-family: 'The Seasons';
+            src: url('theSeasonsFont.otf') format('opentype');
+            /* Add additional formats if available */
+        }
+.button-container {
+        text-align: center;
+    }
+/* Style to add gap between buttons */
+    .button-container button {
+        margin: 0 70px; /* Adjust the margin value as needed */
+    }
+
+        body {
+            margin: 0;
+            font-family: 'The Seasons', Arial, sans-serif; /* Use The Seasons font */
+            background-size: 70%; /* Reduce image size by 70% */
+            background-repeat: no-repeat;
+            background-position: center 40px; /* Adjust vertical position */
+        }
+
+        header {
+            position: relative; /* Set header to relative positioning */
+            background-color: #ede5d9; /* Set header background color */
+            color: #6f131e; /* Set header font color */
+            padding: 35px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'The Seasons', Arial, sans-serif; /* Use The Seasons font */
+        }
+
+        header img {
+            position: absolute; /* Set image to absolute positioning */
+            top: 50%; /* Position image vertically at the middle of the header */
+            transform: translateY(-50%); /* Center image vertically */
+            height: 130px;
+            width: auto;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap; /* Allow navigation links to wrap */
+            justify-content: center; /* Center align navigation links */
+        }
+
+        nav a {
+            color: #6f131e; /* Set nav link font color */
+            text-decoration: none;
+            margin: 10px; /* Adjust margin for navigation links */
+            font-family: 'The Seasons', Arial, sans-serif; /* Use The Seasons font */
+            cursor: pointer; /* Add cursor pointer */
+        }
+
+        footer {
+            background-color: #ede5d9; /* Set footer background color */
+            color: #6f131e; /* Set footer font color */
+            text-align: center;
+            padding: 10px;
+            font-family: 'The Seasons', Arial, sans-serif; /* Use The Seasons font */
+        }
+
+        footer a {
+            color: #6f131e; /* Set footer link font color */
+            text-decoration: none;
+        }
+        .search-container {
+            text-align: center;
+        }
+
+        .search-container input[type=text] {
+            padding: 10px;
+            margin: 10px;
+            width: 50%;
+            border: 2px solid #6f131e;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        .search-container button {
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #6f131e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .search-results {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .search-results ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .search-results ul li {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+
+
+        /* Media query for smaller screens */
+        @media screen and (max-width: 768px) {
+            body {
+                background-size: 100%; /* Adjust background image size */
+            }
+            
+            header {
+                flex-direction: column; /* Stack header items vertically */
+                padding: 20px;
+            }
+
+            header img {
+                position: static; /* Reset image positioning */
+                margin-bottom: 20px; /* Add spacing below logo */
+            }
+
+            nav {
+                flex-direction: column; /* Stack navigation links vertically */
+                align-items: center; /* Center align navigation links */
+            }
+            .search-container {
+        text-align: center;
+        margin-top: 10px; /* Reduce top margin */
+    }
+
+    .search-container input[type=text] {
+        padding: 8px; /* Reduce padding */
+        margin: 5px; /* Reduce margin */
+        width: 70%; /* Adjust width */
+        font-size: 14px; /* Reduce font size */
+    }
+
+    .search-container button {
+        padding: 8px 16px; /* Reduce padding */
+        margin: 5px; /* Reduce margin */
+        font-size: 14px; /* Reduce font size */
+    }
+
+    .search-results {
+        margin-top: 10px; /* Reduce top margin */
+    }
+
+    .search-results ul li {
+        font-size: 16px; /* Reduce font size */
+    }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="logo.png" alt="Logo">
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a> <!-- Link to the gallery.html page -->
+            <a href="schedule.html">Schedule</a>
+            <a href="contribution.html">Contribution</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <div><h2>site under development</h2></div>
+    <div><h2>Amazon products can be bought here and the amount received</h2></div>
+    <div><h2>will be used for Aurum township community welfare of 2000 families </h2></div>
+    <div><h2>Public association will receive the amount in its bank account </h2></div>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search...">
+        <button onclick="searchOnAmazon()">Search on Amazon</button>
+    </div>
+
+    <div class="search-results">
+        <ul id="searchResults"></ul>
+    </div>
+
+    <script>
+        function searchOnAmazon() {
+            const searchQuery = document.getElementById("searchInput").value;
+            fetch("http://www.freetopic.com/getDetails?query=" + searchQuery)
+                .then(response => response.json())
+                .then(data => {
+                    displaySearchResults(data);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+
+        function displaySearchResults(results) {
+            const searchResultsElement = document.getElementById("searchResults");
+            searchResultsElement.innerHTML = "";
+            results.forEach(result => {
+                const li = document.createElement("li");
+                li.textContent = result.name + " - " + result.price;
+                searchResultsElement.appendChild(li);
+            });
+        }
+    </script>
+
+    <footer>
+        <a href="registrations.html">Registrations</a>
+    </footer>
+
+</body>
+</html>
